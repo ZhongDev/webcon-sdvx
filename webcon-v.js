@@ -1,17 +1,23 @@
 // require
 const fs = require("fs");
 const os = require("os");
+var robotarray = [];
+var nextrobot = 0;
+generateRobots(32);
+var robotlength = robotarray.length;
+//console.log(robotarray, robotlength);
 //const robot = require("robotjs");
-const ks = require("node-key-sender");
-ks.setOption("startDelayMillisec", 0);
-ks.setOption("globalDelayBetweenMillisec", 0);
-ks.setOption("globalDelayPressMillisec", 0);
+///
+//const ks = require("node-key-sender");
+//ks.setOption("startDelayMillisec", 0);
+//ks.setOption("globalDelayBetweenMillisec", 0);
+//ks.setOption("globalDelayPressMillisec", 0);
+///
 const WebSocket = require("ws");
 const connect = require("connect");
 const serveStatic = require("serve-static");
 
 // configuration of imported packages
-//robot.setKeyboardDelay(0); //remove 10ms sleep delay
 const wss = new WebSocket.Server({ port: 8443 });
 
 // import key configuration
@@ -23,17 +29,21 @@ MergeEncodingBinding(keyencodingmap, keybindings);
 // handle websocket requests
 wss.on("connection", function connection(ws) {
   ws.on("message", function incoming(msg) {
-    console.log(msg);
+    //console.log(msg);
     if (msg.length > 1) {
       var unbufferedmsg = msg.match(/.{1,2}/g);
       for (var arr of unbufferedmsg) {
         var arr = msg.split("");
         switch (arr[0]) {
           case "1":
-            keydown(arr[1]);
+            var localrobot = nextrobot;
+            nextrobot = (nextrobot + 1) % robotlength;
+            keydown(arr[1], localrobot);
             break;
           case "0":
-            keyup(arr[1]);
+            var localrobot = nextrobot;
+            nextrobot = (nextrobot + 1) % robotlength;
+            keyup(arr[1], localrobot);
             break;
         }
       }
@@ -82,14 +92,26 @@ function MergeEncodingBinding(keyencodingmap, keybindings) {
   }
 }
 
-async function keydown(key) {
-  ks.startBatch()
+async function keydown(key, roboti) {
+  console.log(roboti, key + "down");
+  robotarray[roboti].keyToggle(key, "down");
+  /*ks.startBatch()
     .batchTypeKey(encodedbindings[key], 0, 3)
-    .sendBatch();
+    .sendBatch();*/
 }
 
-async function keyup(key) {
-  ks.startBatch()
+async function keyup(key, roboti) {
+  console.log(roboti, key + "up");
+  robotarray[roboti].keyToggle(key, "up");
+  /*ks.startBatch()
     .batchTypeKey(encodedbindings[key], 0, 2)
-    .sendBatch();
+    .sendBatch();*/
+}
+
+function generateRobots(amount) {
+  for (i = 0; i < amount; i++) {
+    robotarray[i] = require("robotjs");
+    robotarray[i].setKeyboardDelay(0); //remove 10ms sleep delay
+  }
+  //console.log(robotarray.length);
 }
