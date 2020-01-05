@@ -17,3 +17,5 @@ This application does not currently have any inbuilt security and is not a plann
 To install, make sure [nodeJS](https://nodejs.org/en/download/ "Click here to goto the nodeJS download page") is installed, and you have cloned this repository. Then run `npm install` to install the necessary prerequisites. To start the server run `node webconx.js`.
 
 # To-do!
+
+- Fix lag issue with robotjs
