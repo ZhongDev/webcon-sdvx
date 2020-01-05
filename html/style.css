@@ -1,0 +1,105 @@
+body,
+html {
+  background: #d4dfe5;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+#vol {
+  height: 25vh;
+  text-align: center;
+}
+
+#vol-bt-spc {
+  height: 10vh;
+}
+
+#bt {
+  height: 30vh;
+  text-align: center;
+}
+
+#bt-fx-spc {
+  height: 20vh;
+}
+
+#fx {
+  height: 15vh;
+  text-align: center;
+}
+
+.bt-btn {
+  box-shadow: 0px 0px 2vh 1.2vh rgba(0, 0, 0, 0.2);
+  background: #aefdff;
+  display: inline-block;
+  height: 30vh;
+  width: 30vh;
+}
+
+.bt-spc {
+  display: inline-block;
+  height: 1vh;
+  width: calc((100vw - 120vh) / 4);
+  vertical-align: middle;
+}
+
+.fx-btn {
+  box-shadow: 0px 0px 2vh 1.2vh rgba(0, 0, 0, 0.2);
+  background: #ff7ba2;
+  display: inline-block;
+  height: 15vh;
+  width: 30vh;
+}
+
+.fx-spc {
+  display: inline-block;
+  height: 1vh;
+  width: 55vh;
+}
+
+.start-btn {
+  box-shadow: 0px 0px 2vh 1.2vh rgba(0, 0, 0, 0.2);
+  background: #2a4de9;
+  display: inline-block;
+  height: 15vh;
+  width: 15vh;
+  margin: 5vh;
+}
+
+.bt-container {
+  display: inline-block;
+}
+
+.startbt-container {
+  display: inline-block;
+  height: 25vh;
+  width: 25vh;
+}
+
+.vol-sldr {
+  box-shadow: 0px 0px 2vh 1.2vh rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  height: 25vh;
+  width: calc((100vw - 25vh - ((100vw - 120vh) / 4 * 3)) / 2);
+  vertical-align: middle;
+}
+
+.vol-l {
+  background: #37f8f3;
+}
+
+.vol-r {
+  background: #fe64d6;
+}

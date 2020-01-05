@@ -1,0 +1,93 @@
+body,
+html {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+*{
+    user-select: none;
+-moz-user-select: none;
+-webkit-touch-callout: none;
+-webkit-user-select: none; 
+}
+
+body{
+    margin: 0;
+}
+
+#vol{
+    background: red;
+    height: 25vh;
+    text-align: center;
+}
+
+#vol-bt-spc{
+    height:10vh;
+}
+
+#bt{
+    background: blue;
+    height: 30vh;
+    text-align: center;
+}
+
+#bt-fx-spc{
+    height:20vh;
+}
+
+#fx{
+    background: green;
+    height: 15vh;
+    text-align: center;
+}
+
+.bt-btn{
+    display: inline-block;
+    height: 30vh;
+    width: 30vh;
+}
+
+.bt-spc{
+    display: inline-block;
+    height: 1vh;
+    width: calc((100vw - 120vh)/4);
+    vertical-align: middle;
+}
+
+.fx-btn{
+    display: inline-block;
+    height: 15vh;
+    width: 30vh;
+}
+
+.fx-spc{
+    display: inline-block;
+    height: 1vh;
+    width: 55vh;
+}
+
+.start-btn{
+    display: inline-block;
+    height: 25vh;
+    width: 25vh;
+}
+
+.bt-container{
+    display: inline-block;
+}
+
+.startbt-container{
+    display: inline-block;
+    background: aqua;
+    height: 25vh;
+    width: 25vh;
+}
+
+.vol-sldr{
+    display: inline-block;
+    background: aqua;
+    height: 25vh;
+    width: calc((100vw - 25vh - ((100vw - 120vh)/4*3))/2);
+    vertical-align: middle;
+}

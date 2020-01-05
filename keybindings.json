@@ -1,0 +1,17 @@
+{
+  "sliders": {
+    "vol-l-left": "q",
+    "vol-l-right": "w",
+    "vol-r-left": "o",
+    "vol-r-right": "p"
+  },
+  "keys": {
+    "start": "1",
+    "bt-a": "d",
+    "bt-b": "f",
+    "bt-c": "j",
+    "bt-d": "k",
+    "fx-l": "c",
+    "fx-r": "m"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebConV</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="vol">
+        <div class="bt-container">
+            <div class="vol-sldr vol-l" ontouchstart="voldown(event, 'l')" ontouchend="volup('l')" ontouchcancel="volup('l')" ontouchmove="vollmove(event, 'l')"></div>
+            <div class="bt-spc"></div>
+            <div class="startbt-container">
+                <button ontouchstart="btdown('start')" ontouchend="btup('start')" ontouchcancel="btup('')" class="start-btn">start</button>
+            </div>
+            <div class="bt-spc"></div>
+            <div class="vol-sldr vol-r" ontouchstart="voldown(event, 'r')" ontouchend="volup('r')" ontouchcancel="volup('r')" ontouchmove="vollmove(event, 'r')"></div>
+        </div>
+    </div>
+    <div id="vol-bt-spc"></div>
+    <div id="bt">
+        <div class="bt-container">
+            <button ontouchstart="btdown('a')" ontouchend="btup('a')" ontouchcancel="btup('a')" class="bt-btn">BT-A</button>
+            <div class="bt-spc"></div>
+            <button ontouchstart="btdown('b')" ontouchend="btup('b')" ontouchcancel="btup('b')" class="bt-btn">BT-B</button>
+            <div class="bt-spc"></div>
+            <button ontouchstart="btdown('c')" ontouchend="btup('c')" ontouchcancel="btup('c')" class="bt-btn">BT-C</button>
+            <div class="bt-spc"></div>
+            <button ontouchstart="btdown('d')" ontouchend="btup('d')" ontouchcancel="btup('d')" class="bt-btn">BT-D</button>
+        </div>
+    </div>
+    <div id="bt-fx-spc"></div>
+    <div id="fx">
+        <div class="bt-container">
+            <button ontouchstart="btdown('fxa')" ontouchend="btup('fxa')" ontouchcancel="btup('fxa')" class="fx-btn">FX-A</button>
+            <div class="fx-spc"></div>
+            <button ontouchstart="btdown('fxb')" ontouchend="btup('fxb')" ontouchcancel="btup('fxb')" class="fx-btn">FX-B</button>
+        </div>
+    </div>
+</body>
+</html>

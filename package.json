@@ -1,0 +1,30 @@
+{
+  "name": "webcon-sdvx",
+  "version": "1.0.0",
+  "description": "A Virtual Sound Voltex Controller",
+  "main": "webcon-v.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhongDev/webcon-sdvx.git"
+  },
+  "keywords": [
+    "webcon",
+    "sdvx"
+  ],
+  "author": "ZhongDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhongDev/webcon-sdvx/issues"
+  },
+  "homepage": "https://github.com/ZhongDev/webcon-sdvx#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "node-key-sender": "^1.0.11",
+    "robotjs": "^0.6.0",
+    "serve-static": "^1.14.1",
+    "ws": "^7.2.1"
+  }
+}
